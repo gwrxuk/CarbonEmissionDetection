@@ -74,6 +74,13 @@ func Predict(url string) string {
     uploadToGemini(fileName, "image/jpeg", client, ctx),
   }
 
+  err = os.RemoveAll(fileName)
+  if err != nil {
+      fmt.Println("Error deleting directory:", err)
+  } else {
+      fmt.Println("Directory successfully deleted")
+  }
+
   session := model.StartChat()
   session.History = []*genai.Content{
     {

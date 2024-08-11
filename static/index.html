@@ -43,7 +43,13 @@
     const pickDate = { "year": "2010", "month": "01", "day": "01" };
     function getResult() {
       pickDate.day = document.querySelector("#day").value;
-      const url = "https://gibs-b.earthdata.nasa.gov/wmts/epsg4326/best/wmts.cgi?TIME=" + pickDate.year + "-" + pickDate.month + "-" + pickDate.day + "&layer=MODIS_Terra_CorrectedReflectance_TrueColor&tilematrixset=250m&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix=4&TileCol=11&TileRow=5";
+      const picDate = pickDate.year + "-" + pickDate.month + "-" + pickDate.day;
+      if (!isBeforeYesterday(new Date(picDate))) {
+        document.querySelector("#output").innerHTML = "Out of date range";
+        return;
+      }
+
+      const url = "https://gibs-b.earthdata.nasa.gov/wmts/epsg4326/best/wmts.cgi?TIME=" + picDate + "&layer=MODIS_Terra_CorrectedReflectance_TrueColor&tilematrixset=250m&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix=4&TileCol=11&TileRow=5";
       document.body.querySelector("#image").src = url;
       document.querySelector("#output").innerHTML = "Loading...";
       document.querySelector("#query").disabled = true;
@@ -115,6 +121,14 @@
       return date.getDate();
     }
 
+    function isBeforeYesterday(givenDate) {
+      const today = new Date();
+      const yesterday = new Date(today);
+      yesterday.setDate(today.getDate() - 1);
+      yesterday.setHours(0, 0, 0, 0);
+      givenDate.setHours(0, 0, 0, 0);
+      return givenDate < yesterday;
+    }
 
     setUp();
     getResult();
