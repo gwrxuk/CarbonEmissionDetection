@@ -1,0 +1,65 @@
+body {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin: 0;
+}
+
+.background-video {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+
+}
+
+#background-video-player {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.result {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin: 0;
+}
+
+.result div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#output {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 20px;
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.datepicker {
+  background-color: aquamarine;
+  color: black;
+  padding: 10px;
+}
+
+.reminder {
+  color: red;
+}
