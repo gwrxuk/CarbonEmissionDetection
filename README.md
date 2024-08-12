@@ -20,7 +20,7 @@ This project is a Go-based web application that interacts with NASA's satellite 
 
 ### Prerequisites
 
-- Go 1.16+
+- Go 1.21+ (GVM recommended)
 - Git
 
 ### Steps
