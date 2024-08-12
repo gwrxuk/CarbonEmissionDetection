@@ -11,7 +11,7 @@ This project is a Go-based web application that interacts with NASA's satellite 
 ## Project Structure
 
 - `main.go`: The entry point of the application, initializing routes and starting the server.
-- `handlers/item.go`: Contains HTTP handlers for managing items in the application, including creating, updating, and deleting items.
+- `handlers/item.go`: Contains HTTP handlers for Restful API.
 - `models/item.go`: Defines the data model for items, which includes the properties and methods related to items.
 - `routers/router.go`: Configures the routes for the application, mapping HTTP endpoints to their corresponding handlers.
 - `utils/helper.go`: Contains utility functions for image processing and interaction with the AI models.
@@ -47,12 +47,7 @@ This project is a Go-based web application that interacts with NASA's satellite 
    The server will start on `http://localhost:8001`.
 
 ### API Endpoints
-
-- `GET /items`: Retrieve all items.
-- `GET /items/{id}`: Retrieve a specific item by its ID.
-- `POST /items`: Create a new item.
-- `PUT /items/{id}`: Update an existing item.
-- `DELETE /items/{id}`: Delete an item by its ID.
+- `POST /prediction`: Post an image for uploading to be analyzed.
 
 ### Web Interface
 
