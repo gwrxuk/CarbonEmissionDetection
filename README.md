@@ -1,7 +1,3 @@
-Based on the analysis of the provided code, here's a draft for a `README.md` file for the project:
-
----
-
 # Carbon Emission Detection
 
 This project is a Go-based web application that interacts with NASA's satellite images to detect and query carbon emission activities. The application uses the Go GenAI SDK to communicate with AI models, analyzing the satellite imagery and providing detailed reports on detected carbon emissions.
@@ -71,7 +67,3 @@ Access the web interface at `http://localhost:8001` to upload images and view th
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-This draft README provides a basic overview of the project, its structure, and how to set it up and run it. Let me know if you'd like to customize any sections or need additional details.
